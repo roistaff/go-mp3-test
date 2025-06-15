@@ -40,7 +40,7 @@ func printTime() {
 	for {
 		pos := streamer.Position()
 		seconds := time.Duration(float64(pos) / float64(format.SampleRate)) * time.Second
-		fmt.Printf("\r%s", seconds.Truncate(time.Second))
+		fmt.Printf("\r%s", seconds.String())
 		time.Sleep(1 * time.Second)
 	}
 }
